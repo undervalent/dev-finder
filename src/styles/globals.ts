@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { CSSReset } from ".";
-import {ThemeProps } from '../types'
+import { ThemeProps } from "../types";
 
 type GlobalThemeProps = {
   theme: ThemeProps;
@@ -44,7 +44,7 @@ ${CSSReset}
   h1 {
    font-size: 2.6rem;
    line-height: 3.8rem;
-   font-webkit: 700;
+   font-weight: 700;
   }
   h2 {
    font-size: 2.2rem;
@@ -73,7 +73,7 @@ export const lightTheme = {
   headers: "var(--dark-primary)",
   username: "var(--primary)",
   themeButton: "var(--secondary)",
-  themeButtonHover: "#222731"
+  themeButtonHover: "#222731",
 };
 export const darkTheme = {
   background: "#141d2f",
@@ -85,5 +85,5 @@ export const darkTheme = {
   headers: "var(--white)",
   username: "var(--primary)",
   themeButton: "var(--white)",
-  themeButtonHover: "#90a4d4"
+  themeButtonHover: "#90a4d4",
 };

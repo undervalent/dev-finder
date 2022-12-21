@@ -71,5 +71,5 @@ margin-bottom: 2rem;
 `;
 
 export const SocialItemText = styled.span`
-color: #fff;
-`;
+color: ${({theme})=> theme.text};
+`
