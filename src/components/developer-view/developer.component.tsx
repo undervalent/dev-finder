@@ -1,6 +1,7 @@
 import React from "react";
 import { useFetchGithubUser } from "../../services";
 import * as Styled from "./developer-view.styles";
+import { format } from "date-fns";
 
 import { MdLocationOn } from "react-icons/md";
 import { FaLink, FaTwitter } from "react-icons/fa";
@@ -8,7 +9,7 @@ import { BsBuilding } from "react-icons/bs";
 
 export function DeveloperView() {
   const [{ data, isLoading, error }] = useFetchGithubUser();
-  console.log("ERROR IN -COMPONENT -->", data, isLoading, error);
+  console.log("ERROR IN -COMPONENT -->", { data, isLoading, error });
   if (error) {
     <div>This user does not exist</div>;
   }
@@ -32,7 +33,6 @@ export function DeveloperView() {
       blog,
     } = data;
 
-    console.log(data);
     return (
       <Styled.Wrapper>
         <Styled.ImageWrapper>
@@ -40,10 +40,12 @@ export function DeveloperView() {
         </Styled.ImageWrapper>
         <Styled.UserContent>
           <Styled.UserInfo>
-            <h2>{name}</h2>
-            <span>Joined {created_at}</span>
+            <div>
+              <h2>{name}</h2>
+              <h3>@{login}</h3>
+            </div>
+            <span>Joined {format(new Date(created_at), "d LLL yyyy")}</span>
           </Styled.UserInfo>
-          <h3>@{login}</h3>
           <Styled.Bio>{bio || "This profile has no bio"}</Styled.Bio>
           <Styled.Statistics>
             <Styled.StatItem>

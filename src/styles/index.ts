@@ -115,10 +115,7 @@ export const CSSReset = css`
     text-transform: none;
   }
 
-  button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"] {
+  button {
     border: none;
     margin: 0;
     padding: 0;

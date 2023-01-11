@@ -19,10 +19,9 @@ function useSearchData(): [any, any] {
 
 export function Search() {
   const [{ error }, { handleFormSubmit }] = useSearchData();
-  console.log("ERROR -->", { error });
   return (
     <Styled.Wrapper onSubmit={handleFormSubmit}>
-      <FiSearch size="26px" color="#0079FF" />
+      <FiSearch size="50px" color="#0079FF" />
       <Styled.Input
         type="search"
         name="search-github"

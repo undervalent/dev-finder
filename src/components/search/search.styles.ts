@@ -31,7 +31,8 @@ export const Input = styled.input`
 `;
 
 export const SearchButton = styled.button`
-  background-color: #0079ff !important;
+  background: #0079ff;
+  background-color: #0079ff;
   border-radius: 1rem;
   width: 10.6rem;
   height: 5rem;
@@ -41,6 +42,10 @@ export const SearchButton = styled.button`
   line-height: 2.4rem;
   font-weight: 700;
   min-width: 10.6rem;
+
+  &:hover {
+    background-color: #60abff;
+  }
 `;
 
 export const ErrorMessage = styled.span`
